@@ -3732,7 +3732,7 @@ table span.badge {
     right: auto;
   }
   .row .col.m3 {
-    width: 25%;
+    width: 20%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -3810,13 +3810,13 @@ table span.badge {
     left: 16.6666666667%;
   }
   .row .col.offset-m3 {
-    margin-left: 25%;
+    margin-left: 20%;
   }
   .row .col.pull-m3 {
-    right: 25%;
+    right: 20%;
   }
   .row .col.push-m3 {
-    left: 25%;
+    left: 20%;
   }
   .row .col.offset-m4 {
     margin-left: 33.3333333333%;
