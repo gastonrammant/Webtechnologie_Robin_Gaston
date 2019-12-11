@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- AWP_In_Variable Name='"webdata".triangleWave' -->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
@@ -35,6 +36,12 @@
           <br><br>
           <h1 class="header center materialize-red-text">Bediening</h1>
           <br><br>
+          <!--This label value is being updated in the background using JavaScript-->
+          <label id="triangleWave" name="triangleWave">:="webdata".triangleWave:</label>
+          </br>
+          <input id='setvar' type="text" />
+          <!--This button modifies the value in the background using JavaScript without a postback-->
+          <button>Modify</button>
         </div>
       </div>
 
@@ -53,6 +60,27 @@
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="js/materialize.js"></script>
       <script src="js/init.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+            //query the trianglewave variable every second
+            $.ajaxSetup({ cache: false });
+            setInterval(function() {
+                $.get("IOtriangleWave.htm", function(result){
+                    $('#triangleWave').text(result);
+                    });
+            },1000);
+             
+            //modify the triangleWave value
+                    $("button").click(function(){
+                        url="IOtriangleWave.htm";
+                        name='"webdata".triangleWave';
+                        val=$('input[id=setvar]').val();
+                        sdata=escape(name)+'='+val;
+                        $.post(url,sdata,function(result){});
+                    });
+     
+        });
+        </script>
     
       </body>
     </html>
