@@ -138,49 +138,72 @@
       <script src="js/materialize.js"></script>
       <script src="js/init.js"></script>
     
-      <script>
-          if (document.getElementById(counter_nood) == 10) {
+      <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajaxSetup({ cache: false });
+        setInterval(function() {
+            $.get("IOnoodstp.html", function(result_nood){
+                $('#counter_nood').text(result_nood.trim());
+
+          if (result_nood == 10) {
             document.getElementById("noodstp1").innerHTML = "radio_button_checked";
           }
 
-          if (document.getElementById(counter_nood) == 20) {
+          if (result_nood == 20) {
             document.getElementById("noodstp2").innerHTML = "radio_button_checked";
           }
 
-          if (document.getElementById(counter_nood) == 30) {
+          if (result_nood == 30) {
             document.getElementById("noodstp3").innerHTML = "radio_button_checked";
           }
 
-          if (document.getElementById(counter_nood) == 35) {
+          if (result_nood == 35) {
             document.getElementById("noodstp4").innerHTML = "radio_button_checked";
           }
 
-          if (document.getElementById(counter_nood) == 40) {
+          if (result_nood == 40) {
             document.getElementById("noodstp5").innerHTML = "radio_button_checked";
           }
 
-          if (document.getElementById(counter_nood) == 50) {
+          if (result_nood == 50) {
             document.getElementById("noodstp6").innerHTML = "radio_button_checked";
           }
 
-          if (document.getElementById(counter_nood) == 60) {
+          if (result_nood == 60) {
             document.getElementById("noodstp7").innerHTML = "radio_button_checked";
           }
 
-          if (document.getElementById(counter_nood) == 70) {
+          if (result_nood == 70) {
             document.getElementById("noodstp8").innerHTML = "radio_button_checked";
           }
 
-          if (document.getElementById(counter_nood) == 80) {
+          if (result_nood == 80) {
             document.getElementById("noodstp9").innerHTML = "radio_button_checked";
           }
 
-          if (document.getElementById(counter_nood) == 90) {
+          if (result_nood == 90) {
             document.getElementById("noodstp10").innerHTML = "radio_button_checked";
           }
+          else {
+            document.getElementById("noodstp1").innerHTML = "radio_button_unchecked";
+            document.getElementById("noodstp2").innerHTML = "radio_button_unchecked";
+            document.getElementById("noodstp3").innerHTML = "radio_button_unchecked";
+            document.getElementById("noodstp4").innerHTML = "radio_button_unchecked";
+            document.getElementById("noodstp5").innerHTML = "radio_button_unchecked";
+            document.getElementById("noodstp6").innerHTML = "radio_button_unchecked";
+            document.getElementById("noodstp7").innerHTML = "radio_button_unchecked";
+            document.getElementById("noodstp8").innerHTML = "radio_button_unchecked";
+            document.getElementById("noodstp9").innerHTML = "radio_button_unchecked";
+            document.getElementById("noodstp10").innerHTML = "radio_button_unchecked";
 
 
-          </script>
+          }
+
+        });
+
+        },1000);
+        });
+    </script>
           
       </body>
     </html>

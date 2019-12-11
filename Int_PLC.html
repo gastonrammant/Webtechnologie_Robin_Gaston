@@ -6,24 +6,15 @@
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     </head>
     <body>
-      <label id="counter_nood">0</label>
-      <label id="counter_stap_a">0</label>
-      <label id="counter_stap_b">0</label>
-      <label id="counter_stap_c">0</label>
-      <label id="counter_stap_d">0</label>
+      <p id="counter_nood">0</p>
+      <p id="counter_stap_a">0</p>
+      <p id="counter_stap_b">0</p>
+      <p id="counter_stap_c">0</p>
+      <p id="counter_stap_d">0</p>
 
     </body>
    
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $.ajaxSetup({ cache: false });
-        setInterval(function() {
-            $.get("IOnoodstp.html", function(result){
-                $('#counter_nood').text(result.trim());
-            });
-        },1000);
-        });
-    </script>
+
 
   <script type="text/javascript">
     $(document).ready(function(){
