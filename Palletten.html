@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        .dotred {
+          height: 120px;
+          width: 120px;
+          background-color: red;
+          border: 5px solid black;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        .dotwhite {
+          height: 120px;
+          width: 120px;
+          background-color: white;
+          border: 5px solid black;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        </style>
+        
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
@@ -60,33 +79,78 @@
 
 
   <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-          <div class="col s12 m4">
-              <div class="icon-block">    
-                <p class="center"><img style="transform: rotate(90deg)" src="src/pallet.gif" alt="pallet" width="250" height="160"></p>
+      <div class="section">
+  
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="icon-block">    
+                  <div class="center">
+                      <h3>
+                      <span id="dot1a" class="dotwhite"></span>
+                      <span id="dot2b" class="dotwhite"></span>
+                      </h3>
+                      <h3>
+                      <span id="dot3a" class="dotwhite"></span>
+                      <span id="dot4a" class="dotwhite"></span>
+                      </h3>
+                      <h3>
+                       <span id="dot5a" class="dotwhite"></span>
+                       <span id="dot6a" class="dotwhite"></span>
+                      </h3>
+                     
+                    </div>
+                    
+                </div>
               </div>
+      
+          <div class="col s12 m4">
+            <div class="icon-block">
+                <div class="center">
+                    <h3>
+                    <span id="dot1b" class="dotwhite"></span>
+                    <span id="dot2b" class="dotwhite"></span>
+                    </h3>
+                    <h3>
+                    <span id="dot3b" class="dotwhite"></span>
+                    <span id="dot4a" class="dotwhite"></span>
+                    </h3>
+                    <h3>
+                     <span id="dot5b" class="dotwhite"></span>
+                     <span id="dot6b" class="dotwhite"></span>
+                    </h3>
+                   
+                  </div>
+
             </div>
-    
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <p class="center"><img style="transform: rotate(90deg)" src="src/pallet.gif" alt="pallet" width="250" height="160"></p>
           </div>
-        </div>
+  
+          <div class="col s12 m4">
+            <div class="icon-block">
+                <div class="center">
+                    <h3>
+                    <span id="dot1c" class="dotwhite"></span>
+                    <span id="dot2c" class="dotwhite"></span>
+                    </h3>
+                    <h3>
+                    <span id="dot3c" class="dotwhite"></span>
+                    <span id="dot4c" class="dotwhite"></span>
+                    </h3>
+                    <h3>
+                     <span id="dot5c" class="dotwhite"></span>
+                     <span id="dot6c" class="dotwhite"></span>
+                    </h3>
+                   
+                  </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <p class="center"><img style="transform: rotate(90deg)" src="src/pallet.gif" alt="pallet" width="250" height="160"></p>
+            </div>
           </div>
         </div>
+  
       </div>
-
+      <br><br>
     </div>
-    <br><br>
-  </div>
-
+  
 
 
   <footer class="page-footer materialize-red">
@@ -102,6 +166,242 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
 
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $.ajaxSetup({ cache: false });
+    setInterval(function() {
+        $.get("IOcounter1.html", function(result_counter1){
+            $('#counter_1').text(result_counter1.trim());
+
+      if (result_counter1 == 0) {
+        document.getElementById("dot1a").innerHTML = "dotwhite";
+        document.getElementById("dot2a").innerHTML = "dotwhite";
+        document.getElementById("dot3a").innerHTML = "dotwhite";
+        document.getElementById("dot4a").innerHTML = "dotwhite";
+        document.getElementById("dot5a").innerHTML = "dotwhite";
+        document.getElementById("dot6a").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter1 == 1) {
+        document.getElementById("dot1a").innerHTML = "dotred";            
+        document.getElementById("dot2a").innerHTML = "dotwhite";
+        document.getElementById("dot3a").innerHTML = "dotwhite";
+        document.getElementById("dot4a").innerHTML = "dotwhite";
+        document.getElementById("dot5a").innerHTML = "dotwhite";
+        document.getElementById("dot6a").innerHTML = "dotwhite";
+
+      } 
+
+      if (result_counter1 == 2) {
+        document.getElementById("dot1a").innerHTML = "dotred";
+        document.getElementById("dot2a").innerHTML = "dotred";
+        document.getElementById("dot3a").innerHTML = "dotwhite";
+        document.getElementById("dot4a").innerHTML = "dotwhite";
+        document.getElementById("dot5a").innerHTML = "dotwhite";
+        document.getElementById("dot6a").innerHTML = "dotwhite";
+
+      } 
+
+      if (result_counter1 == 3) {
+        document.getElementById("dot1a").innerHTML = "dotred";
+        document.getElementById("dot2a").innerHTML = "dotred";
+        document.getElementById("dot3a").innerHTML = "dotred";
+        document.getElementById("dot4a").innerHTML = "dotwhite";
+        document.getElementById("dot5a").innerHTML = "dotwhite";
+        document.getElementById("dot6a").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter1 == 4) {
+        document.getElementById("dot1a").innerHTML = "dotred";
+        document.getElementById("dot2a").innerHTML = "dotred";
+        document.getElementById("dot3a").innerHTML = "dotred";
+        document.getElementById("dot4a").innerHTML = "dotred";
+        document.getElementById("dot5a").innerHTML = "dotwhite";
+        document.getElementById("dot6a").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter1 == 5) {
+        document.getElementById("dot1a").innerHTML = "dotred";
+        document.getElementById("dot2a").innerHTML = "dotred";
+        document.getElementById("dot3a").innerHTML = "dotred";
+        document.getElementById("dot4a").innerHTML = "dotred";
+        document.getElementById("dot5a").innerHTML = "dotred";
+        document.getElementById("dot6a").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter1 == 6) {
+        document.getElementById("dot1a").innerHTML = "dotred";
+        document.getElementById("dot2a").innerHTML = "dotred";
+        document.getElementById("dot3a").innerHTML = "dotred";
+        document.getElementById("dot4a").innerHTML = "dotred";
+        document.getElementById("dot5a").innerHTML = "dotred";
+        document.getElementById("dot6a").innerHTML = "dotred";
+
+      }
+
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $.ajaxSetup({ cache: false });
+    setInterval(function() {
+        $.get("IOcounter2.html", function(result_counter_2){
+            $('#counter_2').text(result_counter_2.trim());
+
+      if (result_counter_2 == 0) {
+        document.getElementById("dot1b").innerHTML = "dotwhite";
+        document.getElementById("dot2b").innerHTML = "dotwhite";
+        document.getElementById("dot3b").innerHTML = "dotwhite";
+        document.getElementById("dot4b").innerHTML = "dotwhite";
+        document.getElementById("dot5b").innerHTML = "dotwhite";
+        document.getElementById("dot6b").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter_2 == 1) {
+        document.getElementById("dot1b").innerHTML = "dotred";            
+        document.getElementById("dot2b").innerHTML = "dotwhite";
+        document.getElementById("dot3b").innerHTML = "dotwhite";
+        document.getElementById("dot4b").innerHTML = "dotwhite";
+        document.getElementById("dot5b").innerHTML = "dotwhite";
+        document.getElementById("dot6b").innerHTML = "dotwhite";
+
+      } 
+
+      if (result_counter_2 == 2) {
+        document.getElementById("dot1b").innerHTML = "dotred";
+        document.getElementById("dot2b").innerHTML = "dotred";
+        document.getElementById("dot3b").innerHTML = "dotwhite";
+        document.getElementById("dot4b").innerHTML = "dotwhite";
+        document.getElementById("dot5b").innerHTML = "dotwhite";
+        document.getElementById("dot6b").innerHTML = "dotwhite";
+
+      } 
+
+      if (result_counter_2 == 3) {
+        document.getElementById("dot1b").innerHTML = "dotred";
+        document.getElementById("dot2b").innerHTML = "dotred";
+        document.getElementById("dot3b").innerHTML = "dotred";
+        document.getElementById("dot4b").innerHTML = "dotwhite";
+        document.getElementById("dot5b").innerHTML = "dotwhite";
+        document.getElementById("dot6b").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter_2 == 4) {
+        document.getElementById("dot1b").innerHTML = "dotred";
+        document.getElementById("dot2b").innerHTML = "dotred";
+        document.getElementById("dot3b").innerHTML = "dotred";
+        document.getElementById("dot4b").innerHTML = "dotred";
+        document.getElementById("dot5b").innerHTML = "dotwhite";
+        document.getElementById("dot6b").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter_2 == 5) {
+        document.getElementById("dot1b").innerHTML = "dotred";
+        document.getElementById("dot2b").innerHTML = "dotred";
+        document.getElementById("dot3b").innerHTML = "dotred";
+        document.getElementById("dot4b").innerHTML = "dotred";
+        document.getElementById("dot5b").innerHTML = "dotred";
+        document.getElementById("dot6b").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter_2 == 6) {
+        document.getElementById("dot1b").innerHTML = "dotred";
+        document.getElementById("dot2b").innerHTML = "dotred";
+        document.getElementById("dot3b").innerHTML = "dotred";
+        document.getElementById("dot4b").innerHTML = "dotred";
+        document.getElementById("dot5b").innerHTML = "dotred";
+        document.getElementById("dot6b").innerHTML = "dotred";
+
+      }
+
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $.ajaxSetup({ cache: false });
+    setInterval(function() {
+        $.get("IOcounter3.html", function(result_counter_3){
+            $('#counter_3').text(result_counter_3.trim());
+
+      if (result_counter_3 == 0) {
+        document.getElementById("dot1c").innerHTML = "dotwhite";
+        document.getElementById("dot2c").innerHTML = "dotwhite";
+        document.getElementById("dot3c").innerHTML = "dotwhite";
+        document.getElementById("dot4c").innerHTML = "dotwhite";
+        document.getElementById("dot5c").innerHTML = "dotwhite";
+        document.getElementById("dot6c").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter_3 == 1) {
+        document.getElementById("dot1c").innerHTML = "dotred";            
+        document.getElementById("dot2c").innerHTML = "dotwhite";
+        document.getElementById("dot3c").innerHTML = "dotwhite";
+        document.getElementById("dot4c").innerHTML = "dotwhite";
+        document.getElementById("dot5c").innerHTML = "dotwhite";
+        document.getElementById("dot6c").innerHTML = "dotwhite";
+
+      } 
+
+      if (result_counter_3 == 2) {
+        document.getElementById("dot1c").innerHTML = "dotred";
+        document.getElementById("dot2c").innerHTML = "dotred";
+        document.getElementById("dot3c").innerHTML = "dotwhite";
+        document.getElementById("dot4c").innerHTML = "dotwhite";
+        document.getElementById("dot5c").innerHTML = "dotwhite";
+        document.getElementById("dot6c").innerHTML = "dotwhite";
+
+      } 
+
+      if (result_counter_3 == 3) {
+        document.getElementById("dot1c").innerHTML = "dotred";
+        document.getElementById("dot2c").innerHTML = "dotred";
+        document.getElementById("dot3c").innerHTML = "dotred";
+        document.getElementById("dot4c").innerHTML = "dotwhite";
+        document.getElementById("dot5c").innerHTML = "dotwhite";
+        document.getElementById("dot6c").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter_3 == 4) {
+        document.getElementById("dot1c").innerHTML = "dotred";
+        document.getElementById("dot2c").innerHTML = "dotred";
+        document.getElementById("dot3c").innerHTML = "dotred";
+        document.getElementById("dot4c").innerHTML = "dotred";
+        document.getElementById("dot5c").innerHTML = "dotwhite";
+        document.getElementById("dot6c").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter_3 == 5) {
+        document.getElementById("dot1c").innerHTML = "dotred";
+        document.getElementById("dot2c").innerHTML = "dotred";
+        document.getElementById("dot3c").innerHTML = "dotred";
+        document.getElementById("dot4c").innerHTML = "dotred";
+        document.getElementById("dot5c").innerHTML = "dotred";
+        document.getElementById("dot6c").innerHTML = "dotwhite";
+
+      }
+
+      if (result_counter_3 == 6) {
+        document.getElementById("dot1c").innerHTML = "dotred";
+        document.getElementById("dot2c").innerHTML = "dotred";
+        document.getElementById("dot3c").innerHTML = "dotred";
+        document.getElementById("dot4c").innerHTML = "dotred";
+        document.getElementById("dot5c").innerHTML = "dotred";
+        document.getElementById("dot6c").innerHTML = "dotred";
+
+      }
+
+  </script>
 
 </body>
 </html>
