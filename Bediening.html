@@ -73,8 +73,8 @@
             //modify the triangleWave value
                     $("button").click(function(){
                         url="IOtriangleWave.htm";
-                        name='"webdata".triangleWave';
-                        val=$('input[id=setvar]').val();
+                        name='"Data_block_1';
+                        val=1;
                         sdata=escape(name)+'='+val;
                         $.post(url,sdata,function(result){});
                     });
