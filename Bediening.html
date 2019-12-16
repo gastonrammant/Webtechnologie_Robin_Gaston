@@ -53,10 +53,10 @@
                 <div class="center">
                   <h5 class="center">Start</h5>
                         <!--This label value is being updated in the background using JavaScript-->
-                  <label id="startknop" name="startknop">:="data_block_1".startknop:</label>
+                  <label id="startknop" name="startknop"></label>
                   <form>
                     
-                    <input id='setvar'  type="text" />
+                    <input id='startknop'  type="text" />
                     <button>Save</button>
                   
                   </form>
@@ -114,7 +114,7 @@
           $("button").click(function(){
                       url="IOstartknop.html";
                       name='"data_block_1".startknop';
-                      val=$('input[id=setvar]').val();
+                      val=$('input[id=startknop]').val();
                       sdata=escape(name)+'='+val;
                       $.post(url,sdata,function(result){});
                   });
