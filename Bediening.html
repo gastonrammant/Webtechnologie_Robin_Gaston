@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- AWP_In_Variable Name='"webdata".triangleWave' -->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
@@ -18,14 +17,14 @@
         <li><a href="Process.html">Back</a></li>
         <li><a href="Home.html">Home</a></li>
         <li><a href="Palletten.html">Palletten</a></li>
-        <li><a href="Foto's.html">Foto's</a></li>
+        <li><a href="Fotos.html">Foto's</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
         <li><a href="Process.html">Back</a></li>
         <li><a href="Home.html">Home</a></li>
         <li><a href="Palletten.html">Palletten</a></li>
-        <li><a href="Foto's.html">Foto's</a></li>
+        <li><a href="Fotos.html">Foto's</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -36,14 +35,41 @@
           <br><br>
           <h1 class="header center materialize-red-text">Bediening</h1>
           <br><br>
-          <!--This label value is being updated in the background using JavaScript-->
-          <label id="triangleWave" name="triangleWave">:="webdata".triangleWave:</label>
-          </br>
-          <input id='setvar' type="text" />
-          <!--This button modifies the value in the background using JavaScript without a postback-->
-          <button>Modify</button>
+        </div>
+  </div>
+
+
+
+  <div class="container">
+      <div class="section">
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="center">
+                  <h5 class="center">Start</h5>
+
+                    <h1><button class="waves-effect materialize-red btn-large" type="submit" name='"data_block_1".startknop' onclick="1"><i class="material-icons right">play_circle_outline</i>Start</button>
+                </div>
+              </div>
+
+              <div class="col s12 m4">
+                  <div class="center">
+                    <h5 class="center">Reset</h5>
+
+                      <h1><button class="waves-effect materialize-red btn-large" type="submit" name='"data_block_1".resetknop' onclick="1"><i class="material-icons right">autorenew</i>Reset</button></h1>
+                  </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="center">
+                      <h5 class="center">Noodstop</h5>
+
+                        <h1><button class="waves-effect materialize-red btn-large" type="submit" name='"data_block_1".noodstopknop' onclick="1"><i class="material-icons right">stop</i>Noodstop</button></h1>
+                    </div>
+                  </div>
+      
         </div>
       </div>
+    </div>
 
       
 
@@ -60,27 +86,8 @@
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="js/materialize.js"></script>
       <script src="js/init.js"></script>
-      <script type="text/javascript">
-        $(document).ready(function(){
-            //query the trianglewave variable every second
-            $.ajaxSetup({ cache: false });
-            setInterval(function() {
-                $.get("IOtriangleWave.htm", function(result){
-                    $('#triangleWave').text(result);
-                    });
-            },1000);
-             
-            //modify the triangleWave value
-                    $("button").click(function(){
-                        url="IOtriangleWave.htm";
-                        name='"webdata".triangleWave';
-                        val=$('input[id=setvar]').val();
-                        sdata=escape(name)+'='+val;
-                        $.post(url,sdata,function(result){});
-                    });
-     
-        });
-        </script>
-    
+
+
+
       </body>
     </html>
