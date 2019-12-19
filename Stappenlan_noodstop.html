@@ -44,26 +44,26 @@
     
           <!--   Icon Section   -->
           <div class="row">
-            <div class="col s12 m2">
+            <div class="col s12 m3">
                 <div class="icon-block">
                     <h5 class="center">noodstap 1</h5>
                     <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp1">radio_button_unchecked</i></h2>
                 </div>
             </div>
-            <div class="col s12 m2">
+            <div class="col s12 m3">
               <div class="icon-block">
                     <h5 class="center">noodstap 2</h5>
                     <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp2">radio_button_unchecked</i></h2>
 
               </div>
             </div>
-            <div class="col s12 m2">
+            <div class="col s12 m3">
               <div class="icon-block">
                     <h5 class="center">noodstap 3</h5>
                     <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp3">radio_button_unchecked</i></h2>
               </div>
             </div>
-            <div class="col s12 m2">
+            <div class="col s12 m3">
               <div class="icon-block">
                   <h5 class="center">noodstap 4</h5>
                   <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp4">radio_button_unchecked</i></h2>
@@ -71,21 +71,21 @@
               </div>
 
             </div>
-            <div class="col s12 m2">
+            <div class="col s12 m3">
               <div class="icon-block">
                     <h5 class="center">noodstap 5</h5>
                     <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp5">radio_button_unchecked</i></h2>
 
               </div>
             </div>
-            <div class="col s12 m2">
+            <div class="col s12 m3">
               <div class="icon-block">
                     <h5 class="center">noodstap 6</h5>
                     <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp6">radio_button_unchecked</i></h2>
 
               </div>
             </div>
-            <div class="col s12 m2">
+            <div class="col s12 m3">
                 <div class="icon-block">
                     <h5 class="center">noodstap 7</h5>
                     <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp7">radio_button_unchecked</i></h2>
@@ -93,7 +93,7 @@
                 </div>
   
             </div>
-            <div class="col s12 m2">
+            <div class="col s12 m3">
                 <div class="icon-block">
                     <h5 class="center">noodstap 8</h5>
                     <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp8">radio_button_unchecked</i></h2>
@@ -101,7 +101,7 @@
                 </div>
   
             </div>
-            <div class="col s12 m2">
+            <div class="col s12 m3">
                 <div class="icon-block">
                     <h5 class="center">noodstap 9</h5>
                     <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp9">radio_button_unchecked</i></h2>
@@ -109,7 +109,7 @@
                 </div>
   
             </div>
-            <div class="col s12 m2">
+            <div class="col s12 m3">
                 <div class="icon-block">
                     <h5 class="center">noodstap 10</h5>
                     <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp10">radio_button_unchecked</i></h2>
@@ -117,6 +117,22 @@
                 </div>
   
             </div>
+            <div class="col s12 m3">
+              <div class="icon-block">
+                  <h5 class="center">noodstap 11</h5>
+                  <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp11">radio_button_unchecked</i></h2>
+
+              </div>
+
+          </div>
+          <div class="col s12 m3">
+            <div class="icon-block">
+                <h5 class="center">noodstap 12</h5>
+                <h2 class="center materialize-red-text"><i class="material-icons" id="noodstp12">radio_button_unchecked</i></h2>
+
+            </div>
+
+        </div>
 
           </div>
         </div>
@@ -145,76 +161,89 @@
             $.get("IOnoodstp.html", function(result_nood){
                 $('#counter_nood').text(result_nood.trim());
 
-          if (result_nood == 10) {
+          if (result_nood == 0) {
             document.getElementById("noodstp1").innerHTML = "radio_button_checked";
           } 
-          else if (result_nood != 10) {
+          else if (result_nood != 0) {
             document.getElementById("noodstp1").innerHTML = "radio_button_unchecked"
           }
 
-          if (result_nood == 20) {
+          if (result_nood == 10) {
             document.getElementById("noodstp2").innerHTML = "radio_button_checked";
           } 
-          else if (result_nood != 20) {
+          else if (result_nood != 10) {
             document.getElementById("noodstp2").innerHTML = "radio_button_unchecked";
           }
 
-          if (result_nood == 30) {
+          if (result_nood == 20) {
             document.getElementById("noodstp3").innerHTML = "radio_button_checked";
           }
-          else if (result_nood != 30) {
+          else if (result_nood != 20) {
             document.getElementById("noodstp3").innerHTML = "radio_button_unchecked"
           }
 
-          if (result_nood == 35) {
+          if (result_nood == 25) {
             document.getElementById("noodstp4").innerHTML = "radio_button_checked";
           }
-          else if (result_nood != 35) {
+          else if (result_nood != 25) {
             document.getElementById("noodstp4").innerHTML = "radio_button_unchecked"
           }
           
-          if (result_nood == 40) {
+          if (result_nood == 30) {
             document.getElementById("noodstp5").innerHTML = "radio_button_checked";
           }
-          else if (result_nood != 40) {
+          else if (result_nood != 30) {
             document.getElementById("noodstp5").innerHTML = "radio_button_unchecked"
           }
           
-          if (result_nood == 50) {
+          if (result_nood == 35) {
             document.getElementById("noodstp6").innerHTML = "radio_button_checked";
           }
-          else if (result_nood != 50) {
+          else if (result_nood != 35) {
             document.getElementById("noodstp6").innerHTML = "radio_button_unchecked"
           }
           
-          if (result_nood == 60) {
+          if (result_nood == 40) {
             document.getElementById("noodstp7").innerHTML = "radio_button_checked";
           }
-          else if (result_nood != 60) {
+          else if (result_nood != 40) {
             document.getElementById("noodstp7").innerHTML = "radio_button_unchecked"
           }
           
-          if (result_nood == 70) {
+          if (result_nood == 50) {
             document.getElementById("noodstp8").innerHTML = "radio_button_checked";
           }
-          else if (result_nood != 70) {
+          else if (result_nood != 50) {
             document.getElementById("noodstp8").innerHTML = "radio_button_unchecked"
           }
           
-          if (result_nood == 80) {
+          if (result_nood == 60) {
             document.getElementById("noodstp9").innerHTML = "radio_button_checked";
           }
-          else if (result_nood != 80) {
+          else if (result_nood != 60) {
             document.getElementById("noodstp9").innerHTML = "radio_button_unchecked"
           }
           
-          if (result_nood == 90) {
+          if (result_nood == 70) {
             document.getElementById("noodstp10").innerHTML = "radio_button_checked";
           }
-          else if (result_nood != 90) {
+          else if (result_nood != 70) {
             document.getElementById("noodstp10").innerHTML = "radio_button_unchecked"
           }
-          
+
+          if (result_nood == 80) {
+            document.getElementById("noodstp11").innerHTML = "radio_button_checked";
+          }
+          else if (result_nood != 80) {
+            document.getElementById("noodstp11").innerHTML = "radio_button_unchecked"
+          }
+
+          if (result_nood == 90) {
+            document.getElementById("noodstp12").innerHTML = "radio_button_checked";
+          }
+          else if (result_nood != 90) {
+            document.getElementById("noodstp12").innerHTML = "radio_button_unchecked"
+          }
 
         });
 
