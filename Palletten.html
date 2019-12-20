@@ -69,7 +69,7 @@
 
                       <h3>
                       <span id="dot1a" class="dotwhite"></span>
-                      <span id="dot2b" class="dotwhite"></span>
+                      <span id="dot2a" class="dotwhite"></span>
                       </h3>
                       <h3>
                       <span id="dot3a" class="dotwhite"></span>
@@ -79,7 +79,9 @@
                        <span id="dot5a" class="dotwhite"></span>
                        <span id="dot6a" class="dotwhite"></span>
                       </h3>
-                     
+                      <h3></h3>
+                      <h4>Gewicht pallet 1:</h4>
+                     <h3 id="gewicht_1">0<a class="materialize-red-text"> gram</a></h3>
                     </div>
                     
                 </div>
@@ -102,7 +104,10 @@
                      <span id="dot5b" class="dotwhite"></span>
                      <span id="dot6b" class="dotwhite"></span>
                     </h3>
-                   
+                    <h3></h3>
+                    <h4>Gewicht pallet 2:</h4>
+                    <h3 id="gewicht_2">0<a class="materialize-red-text"> gram</a></h3>
+
                   </div>
 
             </div>
@@ -125,7 +130,10 @@
                      <span id="dot5c" class="dotwhite"></span>
                      <span id="dot6c" class="dotwhite"></span>
                     </h3>
-                   
+                    <h3></h3>
+                    <h4>Gewicht pallet 3:</h4>
+                    <h3 id="gewciht_3">0<a class="materialize-red-text"> gram</a></h3>
+
                   </div>
 
             </div>
@@ -396,6 +404,41 @@
         });
 
   </script>
+          <script type="text/javascript">
+            $(document).ready(function(){
+                $.ajaxSetup({ cache: false });
+            setInterval(function() {
+                $.get("IOgewicht_pallet_1.html", function(gewicht_1){
+                    $('#gewicht_pallet_1').text(gewicht_1.trim());
+            })
+            },1000);
+            });
+          </script>
+
+          </script>
+          <script type="text/javascript">
+            $(document).ready(function(){
+                $.ajaxSetup({ cache: false });
+            setInterval(function() {
+                $.get("IOgewicht_pallet_2.html", function(gewicht_2){
+                    $('#gewicht_pallet_2').text(gewicht_2.trim());
+            })
+            },1000);
+            });
+          </script>
+
+          </script>
+          <script type="text/javascript">
+            $(document).ready(function(){
+                $.ajaxSetup({ cache: false });
+            setInterval(function() {
+                $.get("IOgewicht_pallet_3.html", function(gewicht_3){
+                    $('#gewicht_pallet_3').text(gewicht_3.trim());
+            })
+            },1000);
+            });
+          </script>
+
 
 </body>
 </html>
